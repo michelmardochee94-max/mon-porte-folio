@@ -1,0 +1,300 @@
+/*Apres avoir fait des heures de recherche sur le css, plus precisement sur w3schools, les ressources fournis par D-Clic, nous utiliserons les selecteurs, les declarations, les proprietes et leurs 
+marging, pandding, top, bottom, height, widht, right, left, font, z-index,boder, dispay flex, wrap, flex-wrap, gap,
+transform, translate, les terminaison vh et px etc... a bon escient pour styliser le tableau. 
+j'espere que vous apprecierez les methodes. */
+
+/* PROPRIÉTÉS GÉNÉRALES DE LA PAGE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* EN-TÊTE DE LA PAGE */
+header {
+    background-color: #286582;
+    color: white;
+    position: fixed;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; /* pour que l'en-tete soit en premier plan, cause des variations dans les animations*/
+}
+/* STYLE DU NOM  */
+.nom {
+    font-weight: bold;
+    font-size: large;
+    color: #0f1316;
+}
+.couleurMardochee {
+    color: white;
+}
+
+/* MENU DE NAVIGATION */
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+.nav-links a {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 8px 12px;
+}
+.nav-links a:hover {
+    color: #56b4f4;
+}
+
+/* PROPRIÉTÉS COMMUNES À TOUTES LES SECTIONS */
+section {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*CORPS DE PAGE PRINCIPAL */
+.corps-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    min-height: 80vh;
+} /*pour traiter le corps de chaque section*/
+
+/* TITRES DE SECTIONS */
+.titre_section {
+    color: #2c3e50;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin: 50px auto 30px;/*pour rendre tous les titres de sections uniformes*/
+}
+
+/* SECTION ACCUEIL*/
+.section-accueil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background-color: #9eb7c7;
+}
+/*TEXTE PRINCIPAL*/
+.corps_text {
+        text-align: center;
+    font-size: 25px;       
+    width: 100%;           
+    max-width: 1000px;     
+    margin: 0 auto;        
+    padding: 20px;         
+}
+/*STYLES DES BOUTONS*/
+.btn-fill {
+    background-color: white;
+    color: #0c4e7a;
+    border: 2px solid #0c4e7a;
+    font-size: 15px;
+    padding: 10px 20px;
+    cursor: pointer; /* pour pointer du doigt quand le curseur arrive sur le bouton*/
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 15px; /*pour tous les boutons*/
+}
+.btn-fill:hover {
+    background-color: #0c4e7a;
+    color: white; /* effet de remplissage de bouton quand le curseur passe*/
+}
+
+/*SECTION À PROPOS*/
+.section-apropos {
+    padding: 60px 0;
+    background-color: #acb6bb;
+}
+
+/* CONTENU À PROPOS*/
+.contenu-apropos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+/*DESCRIPTION*/
+.description {
+    flex: 1;
+    min-width: 300px;
+    margin-bottom: 15px;/* pour bien dimmensionner les textes (methode tatonnement)*/
+}
+.texte-description p {
+    margin-bottom: 15px;
+}
+
+/*PHOTO DE PROFIL*/
+.photo {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+     /* pour bien dimmensionner la photo (methode tatonnement)*/
+}
+
+/*SECTION PROJETS*/
+.section-projet {
+    padding: 60px 0;
+    background-color: #9eb7c7; /* couleur et condition adaptees a toutess la section*/
+}
+
+/* CONTENEUR DES PROJETS */
+.projets {
+    display: flex;
+    flex-wrap: wrap; /*effet qui permet de passer a la ligne suivante automatiquement qu'il n'y a plus espace*/
+    gap: 30px;
+    justify-content: center;
+}
+
+/* BOÎTE DE PROJET */
+.boite-projet {
+    background-color: white;
+        border-radius: 10px;
+      padding: 25px;
+       min-width: 250px;
+    max-width: 350px; /* pour les 3 boites de projets*/
+}
+.boite-projet:hover {
+    transform: translateY(-5px); /* effet de soulevement des boites de projet*/
+}
+.boite-projet h3 {
+    color: #0c4e7a;
+         margin-bottom: 10px;
+}
+     .boite-projet h4 {
+    color: #286582;
+       margin-bottom: 15px;
+    font-weight: normal;
+}
+
+/* SECTION COMPÉTENCES*/
+.section-competences {
+    padding: 60px 0;
+    background-color: #cad6d4;
+}
+
+/*CONTENU COMPÉTENCES*/
+.contenue-competences {
+    display: flex;
+       flex-wrap: wrap; /*cette declaration est tres importante*/
+    gap: 40px;
+    justify-content: center;
+}
+
+/*OUTILS PRINCIPAUX*/
+.principalesOutils {
+    flex: 1;
+    min-width: 300px;
+    padding: 25px;
+}
+.principalesOutils h3 { /*cache dans le html mais applique directement a h3*/
+    color: #345b7d;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ÉLÉMENTS DE COMPÉTENCE*/
+.elements {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;              /*methode de tatonnement pour resoudre un probleme*/
+}
+
+/* NOMS DES COMPÉTENCES */
+.noms-competences {
+    flex: 1;
+    font-weight: bold;
+}
+
+/* BARRES DE NIVEAU */
+.niveau-barre {
+    flex: 2;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden; /*pour Cacher ce qui dépasse de la barre de niveau*/
+}
+.niveau-rempli {
+    height: 100%;
+    background-color: #0c4e7a;
+    border-radius: 5px;
+}
+
+/* POURCENTAGE*/
+.pourcentage {
+    width: 40px;
+    text-align: right;
+    font-weight: bold;   
+}
+
+/* SECTION CONTACT */
+.section-contact {
+    padding: 60px 0;
+    background-color: #9eb7c7;
+}
+
+/* FORMULAIRE DE CONTACT */
+.contact-form {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+        }        
+.form-ligne {
+    display: flex;
+    margin-bottom: 15px;
+}        
+.champ {
+    flex: 1;
+    margin-right: 10px;
+}       
+.champ:last-child {
+    margin-right: 0;
+}        
+label {
+    font-weight: bold;
+}        
+input, textarea {
+    width: 100%;
+    padding: 8px;
+ /*pour ajouter du style*/
+    border-radius: 4px;
+}       
+textarea {
+    height: 100px;
+}
+
+/* PIED DE PAGE */
+footer {
+    text-align: center;
+    background-color: #286582;
+    color: white;
+    padding: 25px 15px; /* pour gerer l'espace du pied de page*/
+    width: 100%;
+}
+
+/* ICÔNES SOCIALES */
+.social-icons {
+    margin-bottom: 20px;
+}
+.social-icons a {
+    color: white;
+    margin: 0 15px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.social-icons a:hover { /* pour changer de couleur quand le curseur passe*/
+    color: #56b4f4;
+}
